@@ -1,3 +1,4 @@
+require('dotenv').config();
 const Crypto = require('crypto');
 const express = require('express');
 var {
@@ -54,6 +55,6 @@ app.get("/api/poll/:id", (req, res) => {
     }
 })
 
-app.listen(process.env.PORT, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log('server started');
 });
